@@ -1,0 +1,91 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-image: linear-gradient(red, orange);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 39em;
+    /* border: 2px solid; */
+}
+#myform{
+    height: 22em;
+    width: 18em;
+    display: flex;
+    justify-content: center; 
+    background-image: linear-gradient(skyblue, aqua, white);   
+    border-radius: 7px;
+    box-shadow: 10px 9px 22px 1px darkslategrey;
+}
+.error{
+    display: none;  
+    color: red; 
+}
+.final{
+    display: none;
+    color: green;
+}
+#step1, #step2, #step3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.area{
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(0, 0, 255, 0.671);
+    background: none;
+    height: 31px;
+    outline: none;
+}
+.upper-input{
+    position: relative;
+    bottom: 20px;
+}
+.lower-input{
+    position: relative;
+    top: 10px;
+}
+h1{
+    position: relative;
+    bottom: 25px;
+}
+.nxt-btn, .prev-btn, .submit-btn{
+    position: relative;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 17px;
+}
+.next{
+    width: 5em;
+    top: 2em; 
+    left: 6em;  
+}
+.prev{
+    width: 6em;
+    right: 7px;
+    top: 64px;
+}
+.submit{
+    width: 4em;
+    left: 6em;
+    top: 34px;
+}
+.error-label{
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid red;
+    background: none;
+    height: 31px;
+    outline: none;
+}

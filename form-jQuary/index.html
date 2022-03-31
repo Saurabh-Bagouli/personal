@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Step-Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/Jquary/jquary.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/icon.png.png">
+
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="myform" accept="#">
+            <div id="step1">
+                <h1>First Step</h1>
+                <div class="upper-input">
+                    <div>
+                        <label>FullName: </label><label id="nameerror" class="error">Invalid name!!</label>
+                    </div>
+                    <div>
+                        <input type="text" name="fullname" class="area" id="fullname" placeholder="Enter name...">
+                    </div>
+                </div>
+                <div class="lower-input">
+                    <div>
+                        <label>E-mail: </label><label id="mailerror" class="error">Invalid email!!</label>
+                    </div>
+                    <div>
+                        <input type="email" name="e-mail" class="area" id="mail" placeholder="Enter mail...">
+                    </div>
+                    <div>
+                        <button type="button" id="nxt-btn1" class="nxt-btn next">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div id="step2">
+                <h1>Second Step</h1>
+                <div class="upper-input">
+                    <div>
+                        <label>Age : </label><label id="ageerror" class="error">Invalid age!!</label>
+                    </div>
+                    <div>
+                        <input type="number" name="Age" class="area" id="age" placeholder="must be greater then 18...">
+                    </div>
+                </div>
+                <div class="lower-input">
+                    <div>
+                        <label>phone number: </label><label id="moberror" class="error">Invalid number!!</label>
+                    </div>
+                    <div>
+                        <input type="number" name="phone-no" class="area" id="mob" placeholder="Enter phone no...">
+                    </div>
+                </div>
+                <button type="button" id="prev-btn1" class="prev-btn prev">Previous</button>
+                <button type="button" id="nxt-btn2" class="nxt-btn next">Next</button>
+
+            </div>
+            <div id="step3">
+                <h1>Final Step</h1>
+                <div>
+                    <label> Password: </label><label id="pswderror" class="error">Invalid password!!</label>
+                </div>
+                <div>
+                    <input type="password" class="area" name="passwrd" id="pswd" placeholder="Enter Password...">
+                </div>
+                <div>
+                    <label>Conform Password: </label><label id="cp-error" class="error">Not matched!!</label>
+                </div>
+                <div>
+                    <input type="password" name="cnfrm-passwrd" class="area" id="cnfrmpswd" placeholder="Enter phone no...">
+                </div>
+                <button type="button" id="prev-btn2" class="prev-btn prev">Previous</button>
+                <button type="submit" id="btn" class="submit-btn submit">submit</button>
+            </div>
+            <div id="res" class="final">
+                <p>form submitted sucessfully!!</p>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
