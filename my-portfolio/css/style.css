@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.custom-nav{
+    background: none;
+    border: none;
+}
+.empty-div{
+    height: 60px;
+}
+.post-div{
+    margin-top: 90px;
+    padding-bottom: 50px;
+}
+.bio-img{
+    width: 243px;
+    height: 243px;
+    border-radius: 50%;
+}
+.card{
+    background-color: white;
+    padding: 6px 41px 10px 25px;
+    margin-left: 18px;
+    border-radius: 4px;
+}
+.card-date-div{
+    padding-top: 20px;
+}
+.card-date{
+    font-size: 16px;
+}
+.works{
+    padding-left: 40px;
+}
+.pera{
+    font-size: 18px;
+}
+.pera-head{
+    padding-top: 17px;
+}
+.btn-custom{
+    font-size: 18px;
+    border-radius: 16px;
+    background-color: #142850;
+    height: 25px;
+    width: 62px;
+    padding: 0px 9px 0px 10px;
+}
+.content{
+    bottom: 24px;
+}
+hr{
+    width: 80%;
+}
+.footer{
+    padding-top: 120px;
+}
+.icon{
+    font-size: 38px;
+    padding-right: 35px;
+}
+.footer-icon{
+    text-align: center;
+}
+.icon-col{
+    padding-left: 50px;
+}
+.footer-end{
+    text-align: center;
+    padding-top: 20px;
+}
+
+@media(max-width:420px){
+    .work-img{
+        width: 343px;
+        height: 246px;
+    }
+    .content{
+        bottom: 0px;
+    }
+    .bio-content, .post-head{
+        text-align: center;
+    }
+    .all-post{
+        display: none;
+    }
+    .card{
+        margin-top: 20px;
+    }
+    .card > h3{
+        font-size: 20px;
+    }
+    .card-date{
+        font-size: 15px;
+        padding-right: 0px;
+    }
+    .card > p{
+        font-size: 16px;
+    }
+    hr{
+        width: auto;
+    }
+}
