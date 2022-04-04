@@ -8,26 +8,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/jquary/script.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./jquary/script.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-default custom-nav">
+        <nav class="navbar navbar-default custom-nav" id="desktop-nav">
             <div class="container-fluid">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item text-dark"><a href="#"><b>Works</b></a></li>
+                    <li class="nav-item"><a href="#"><b>Works</b></a></li>
                     <li class="nav-item"><a href="#"><b>Blog</a></b></li>
                     <li class="nav-item"><a href="#"><b>Contect</b></a></li>
                 </ul>
             </div>
         </nav>
+        <nav class="navbar navbar-inverse mobile-nav-custom" id="mobile-nav">
+            <div class="sidebar-btn">
+                <button type="button" class="back-btn btn-danger" id="hide-nav" style="float: right;">
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+                </button>
+            </div>
+            <ul class="list-unstyled components mobile-nav-list">
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contect</a></li>
+            </ul>
+        </nav>
+        <button type="button" id="sidebar-btn" class="btn btn-info navbar-btn" style="position: relative;">
+            <i class="glyphicon glyphicon-align-left"></i>
+        </button>
         <div class="row bio">
             <div class="col-md-1"></div>
-            <div class="col-md-5 col-xs-12 bio-content">
+            <div class="col-md-5 col-sm-6 col-xs-12 bio-content" id="head-sec">
                 <dl>
                     <dt>
                         <h1><b>Hi, I am Saurabh,</b></h1>
@@ -42,22 +57,20 @@
                 </dl>
                 <button type="button" class="btn btn-danger" style="font-size: 18px;">Download Resume</button>
             </div>
-            <div class="col-md-1 col-xs-12 empty-div">
-                <!--extra space-->
-            </div>
-            <div class="col-md-5 col-xs-12">
-                <img src="./img/my-pic.jpg" alt="my-pic" class="img-responsive center-block bio-img">
+            <div class="col-md-1 col-sm-1 col-xs-12 empty-div"></div>
+            <div class="col-md-5 col-sm-5 col-xs-12" id="head-img">
+                <img src="./assets/img/my-pic.jpg" alt="my-pic" class="img-circle img-responsive center-block bio-img">
             </div>
         </div>
     </div>
-    <div class="row bg-info post-div container-fluid">
+    <div class="row bg-info post-div container-fluid" id="post">
         <div class="container">
             <div class="col-md-1"></div>
-            <div class="col-md-5 post-head">
+            <div class="col-md-5 col-sm-6 post-head">
                 <h3>Recent posts</h3>
             </div>
-            <div class="col-md-5 text-right text-primary all-post">
-                <h4>View all</h4>
+            <div class="col-md-5 col-sm-6 text-right text-primary all-post">
+                <h4><a href="#post" id="show-more" style="text-decoration: none;">View all</a></h4>
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -91,6 +104,44 @@
                 <div class="col-md-1"></div>
             </div>
         </div>
+        <div class="row" id="view-all" style="display: none;">
+            <div class="container">
+                <div class="col-md-1"></div>
+                <div class="col-md-5 card">
+                    <h3><b>Making a design system from scratch</b></h3>
+                    <div class="row card-date-div">
+                        <div class="col-md-4 col-xs-4 card-date">12 Feb 2020</div>
+                        <div class="col-md-1 col-xs-1 card-date">|</div>
+                        <div class="col-md-5 col-xs-6 card-date">Design, Pattern</div>
+                    </div>
+                    <p style="margin-top: 20px; font-size: 18px;">Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint.
+                        Velit officia consequat duis enim velit mollit.
+                        Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+                <div class="col-md-5 card">
+                    <h3><b>Creating pixel perfect icons in Figma</b></h3>
+                    <div class="row card-date-div">
+                        <div class="col-md-4 col-xs-4 card-date">12 Feb 2020</div>
+                        <div class="col-md-1 col-xs-1 card-date">|</div>
+                        <div class="col-md-5 col-xs-6 card-date">Figma, Icon Design</div>
+                    </div>
+                    <p style="margin-top: 20px; font-size: 18px;">Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint.
+                        Velit officia consequat duis enim velit mollit.
+                        Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col md-4 col-sm-11 text-right">
+                    <a href="#post" id="show-less" style="text-decoration: none; display: none;">View less</a>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="container works">
@@ -101,8 +152,8 @@
             <div class="col-md-1"></div>
             <div class="row">
                 <div class="col-md-1" style="width:111px;"></div>
-                <div class="col-md-3"><img src="./img/dashbord.png" alt="image" class="work-img"></div>
-                <div class="col-md-7 content">
+                <div class="col-md-2 col-sm-4"><img src="./assets/img/dashbord.png" alt="image" class="work-img"></div>
+                <div class="col-md-7 col-sm-offset-1 col-sm-7  content">
                     <h3><b>Designing Dashboards</b></h3>
                     <div class="row pera-head">
                         <div class="col-md-2 col-xs-3">
@@ -121,8 +172,8 @@
             <hr>
             <div class="row">
                 <div class="col-md-1" style="width:111px;"></div>
-                <div class="col-md-3"><img src="./img/vibrent.png" alt="image" class="work-img"></div>
-                <div class="col-md-7 content">
+                <div class="col-md-2 col-sm-4"><img src="./assets/img/vibrent.png" alt="image" class="work-img"></div>
+                <div class="col-md-7 col-sm-offset-1 col-sm-7 content">
                     <h3><b>Vibrant Portraits of 2020</b></h3>
                     <div class="row pera-head">
                         <div class="col-md-2 col-xs-3">
@@ -141,8 +192,8 @@
             <hr>
             <div class="row">
                 <div class="col-md-1" style="width:111px;"></div>
-                <div class="col-md-3"><img src="./img/typography.png" alt="image" class="work-img"></div>
-                <div class="col-md-7 content">
+                <div class="col-md-2 col-sm-4"><img src="./assets/img/typography.png" alt="image" class="work-img"></div>
+                <div class="col-md-7 col-sm-offset-1 col-sm-7 content">
                     <h3><b>36 Days of Malayalam type</b></h3>
                     <div class="row pera-head">
                         <div class="col-md-2 col-xs-3">
